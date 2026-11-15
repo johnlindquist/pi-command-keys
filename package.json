@@ -1,0 +1,31 @@
+{
+  "name": "pi-command-keys",
+  "version": "0.1.0",
+  "description": "Keyboard shortcuts for slash commands in Pi: Option+1 runs /split, Option+2 runs /lab, or whatever you set with /keys.",
+  "license": "MIT",
+  "type": "module",
+  "keywords": ["pi-package", "pi", "keybindings", "shortcuts"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnlindquist/pi-command-keys.git"
+  },
+  "pi": {
+    "extensions": ["./index.ts"]
+  },
+  "files": ["index.ts", "keys.ts", "README.md", "LICENSE"],
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": ">=1.4.0 <2",
+    "@earendil-works/pi-tui": ">=1.4.0 <2"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "^1.5.0",
+    "@earendil-works/pi-tui": "^1.5.0",
+    "bun-types": "^1.4.4",
+    "typescript": "^5.6.0"
+  },
+  "scripts": {
+    "test": "bun test",
+    "typecheck": "tsc --noEmit",
+    "check": "tsc --noEmit && bun test"
+  }
+}
